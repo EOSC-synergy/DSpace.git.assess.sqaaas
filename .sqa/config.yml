@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/Ophidia
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/openaire/DSpace:
+      branch: master
+      repo: https://github.com/openaire/DSpace.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/openaire/DSpace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-silver-moth.sh
+        container: qc.acc_chewy-coral-boar
+  QC.Doc:
+    repos:
+      github.com/openaire/DSpace find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-pear-robin.sh
+        container: qc.doc_skinny-ultramarine-oriole
+      github.com/openaire/DSpace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-salmon-uguisu.sh
+        container: qc.doc_cranky-denim-terrier
+      github.com/openaire/DSpace markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-tomato-cassowary.sh
+        container: qc.doc_ready-aquamarine-chamois
+  QC.Lic:
+    repos:
+      github.com/openaire/DSpace licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-carmine-toucan.sh
+        container: qc.lic_tacky-fuchsia-crocodile
+  QC.Sty:
+    repos:
+      github.com/openaire/DSpace checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-thistle-bison.sh
+        container: qc.sty_baggy-amaranth-salamander
+      github.com/openaire/DSpace hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-chestnut-worm.sh
+        container: qc.sty_cheeky-taupe-gharial
+      github.com/openaire/DSpace jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-thistle-argentino.sh
+        container: qc.sty_scanty-mustard-ferret
+  QC.Ver:
+    repos:
+      github.com/openaire/DSpace get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-chartreuse-mammoth.sh
+        container: qc.ver_baggy-pumpkin-seahorse
+timeout: 5400
