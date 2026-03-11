@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/Ophidia
+      branch: feature/pynblint
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/openaire/DSpace:
       branch: master
@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/openaire/DSpace git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-silver-moth.sh
-        container: qc.acc_chewy-coral-boar
+        - /usr/bin/env sh .sqa/script.wheezy-aqua-impala.sh
+        container: qc.acc_chewy-amber-magpie
   QC.Doc:
     repos:
       github.com/openaire/DSpace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-pear-robin.sh
-        container: qc.doc_skinny-ultramarine-oriole
+        - /usr/bin/env sh .sqa/script.blurry-xanthic-crab.sh
+        container: qc.doc_jumpy-aquamarine-schnauzer
       github.com/openaire/DSpace git:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-salmon-uguisu.sh
-        container: qc.doc_cranky-denim-terrier
+        - /usr/bin/env sh .sqa/script.lanky-platinum-boar.sh
+        container: qc.doc_wiggy-cardinal-quokka
       github.com/openaire/DSpace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-tomato-cassowary.sh
-        container: qc.doc_ready-aquamarine-chamois
+        - /usr/bin/env sh .sqa/script.droopy-indigo-fox.sh
+        container: qc.doc_tacky-ecru-markhor
   QC.Lic:
     repos:
       github.com/openaire/DSpace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-carmine-toucan.sh
-        container: qc.lic_tacky-fuchsia-crocodile
+        - /usr/bin/env sh .sqa/script.woozy-blue-snake.sh
+        container: qc.lic_foggy-coral-opossum
   QC.Sty:
     repos:
       github.com/openaire/DSpace checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-thistle-bison.sh
-        container: qc.sty_baggy-amaranth-salamander
+        - /usr/bin/env sh .sqa/script.cozy-cinnabar-horse.sh
+        container: qc.sty_boozy-chocolate-paradise
       github.com/openaire/DSpace hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-chestnut-worm.sh
-        container: qc.sty_cheeky-taupe-gharial
+        - /usr/bin/env sh .sqa/script.shaggy-silver-hound.sh
+        container: qc.sty_stinky-pink-tetra
       github.com/openaire/DSpace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-thistle-argentino.sh
-        container: qc.sty_scanty-mustard-ferret
+        - /usr/bin/env sh .sqa/script.wheezy-gold-ant.sh
+        container: qc.sty_clammy-lemon-hyena
   QC.Ver:
     repos:
       github.com/openaire/DSpace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-chartreuse-mammoth.sh
-        container: qc.ver_baggy-pumpkin-seahorse
+        - /usr/bin/env sh .sqa/script.skanky-aquamarine-bullfrog.sh
+        container: qc.ver_stinky-puce-balinese
 timeout: 5400
